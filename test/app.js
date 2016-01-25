@@ -5,7 +5,8 @@ var helpers = require('yeoman-test');
 
 describe('generator-seedio:app', function () {
     before(function (done) {
-        console.log(__dirname);
+        this.timeout(0); // Disable timeout because we are downloading the Repo from github.
+        
         helpers.run(path.join(__dirname, '../generators/app'))
             .on('end', done);
     });
