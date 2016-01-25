@@ -13,7 +13,7 @@ module.exports = yeoman.generators.Base.extend({
 
     writing: function () {
         var done = this.async();
-        this.remote('livio', 'seedio', 'master', function(err, remote) {
+        this.remote('livio', 'seedio', 'master', function (err, remote) {
             remote.directory('.', this.destinationPath());
             done();
         }.bind(this));
@@ -22,8 +22,8 @@ module.exports = yeoman.generators.Base.extend({
     install: function () {
         this.installDependencies();
     },
-    
-    end: function() {
+
+    end: function () {
         this.log(yosay('Run the server with ' + chalk.yellow('npm start')))
     }
 });
