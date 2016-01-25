@@ -4,6 +4,7 @@ node_js:
   - v4
   - '0.12'
   - '0.10'
+bundler_args: --retry 3
 before_script:
     - npm install -g gulp
 script: gulp
